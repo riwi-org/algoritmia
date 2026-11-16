@@ -26,3 +26,20 @@ SubProceso totalPedido <- LeerPedido
 		Leer precio
 	FinMientras
 FinSubProceso
+
+// Subproceso reutilizable que calcula el porcentaje de un valor base
+SubProceso resultado <- CalcularPorcentaje(base, porcentaje)
+	Definir resultado Como Real
+	resultado <- (base * porcentaje) / 100
+FinSubProceso
+
+// Subproceso que suma los cargos e imprime el desglose final
+SubProceso ImprimirFactura(subtotal, impuesto, propina)
+	Definir totalFinal Como Real
+	totalFinal <- subtotal + impuesto + propina
+	
+	Escribir "Subtotal: $", subtotal
+	Escribir "Impuesto (8%): $", impuesto
+	Escribir "Propina (10%): $", propina
+	Escribir "TOTAL A PAGAR: $", totalFinal
+FinSubProceso
