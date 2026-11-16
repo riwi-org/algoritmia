@@ -1,9 +1,12 @@
 Algoritmo Semaforo
+	// Declaración de variable entera
 	Definir unidades Como Entero
 	
+	// Entrada de datos
 	Escribir "Ingrese la cantidad de unidades:"
 	Leer unidades
 	
+	// Clasificación del nivel de inventario por rangos
 	Si unidades < 0 Entonces
 		Escribir "error"
 	SiNo
